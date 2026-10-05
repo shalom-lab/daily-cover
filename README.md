@@ -1,31 +1,32 @@
-# 微信公众号老黄历封面图生成器（万年黄历）
+# 微信公众号每日封面图生成器 (Daily Cover)
 
-专为**微信公众号每日老黄历推文**量身打造的高清封面图排版与生成工具。严格遵循微信公众号 **2.35:1 头条封面（900 × 383）** 与 **1:1 次条小图（900 × 900）** 官方视觉标准，内置「十全十美」东方吉祥意境画卷，彻底去除生硬矩形画框，采用宣纸自然留白与文人落款排版美学。
+专为**微信公众号每日图文推文**量身打造的高清封面图排版与生成工具。严格遵循微信公众号 **2.35:1 头条封面（900 × 383 px）** 与 **1:1 次条小图（900 × 900 px）** 官方视觉标准，内置「十全十美」东方吉祥意境画卷，彻底去除生硬矩形画框，采用宣纸自然留白与文人落款排版美学。
 
 ---
 
 ## 🌟 核心特性
 
-- **「十全十美」十大东方吉祥意境主题**：松鹤迎春、五谷丰登、年年有鱼、招财进宝、紫气东来、福寿双全、花开富贵、喜上眉梢、金玉满堂、竹报平安。
-- **彻底无框·纯净留白**：摒弃任何沉重木框、金框或矩形色块，文字与印章如书法般自然浮现在宣纸上。
-- **公历与农历独立字号滑块**：阳历大字与阴历小字字号完全独立自由调节，支持两行文字间距微调。
-- **东方文人印章美学**：支持文人落款印（农历末尾随形钤印）、对角呼应印、左右对称印与纯净留白。
-- **故宫文创风底部品牌标识**：支持自定义底部品牌名称（如“万年黄历”），采用宽字距宋体与朱砂印标，距底边距与字号自由微调。
+- **「十全十美」十大东方美学吉祥主题**：松鹤迎春、五谷丰登、年年有鱼、招财进宝、紫气东来、福寿双全、花开富贵、喜上眉梢、金玉满堂、竹报平安。
+- **彻底无框·纯净留白**：摒弃沉重木框、金框或生硬色块，文字与印章如书法题跋般自然浮现在宣纸上。
+- **公历与农历独立字号滑块**：阳历大字与阴历干支字号完全独立自由调节，支持两行文字间距与垂直位置微调。
+- **东方文人印章美学**：支持文人落款印（随形钤印）、对角呼应印、左右对称印与纯净留白。
+- **故宫文创风底部品牌标识**：支持自定义底部公众号名称或栏目标识（如“岁序良辰”），采用宽字距宋体与微型朱砂印标，距底边距与字号自由微调。
 - **一键复制与 2x/3x 高清导出**：直接写入系统剪贴板，秒贴进微信公众号图文后台；或一键下载超清 PNG。
 - **自动化无头调用（Headless）友好**：原生支持 URL 参数与 Node.js / Python 无头脚本批量生成。
+- **GitHub Pages 一键部署**：内置 GitHub Actions 持续集成与发布工作流。
 
 ---
 
 ## ⚙️ 默认黄金推荐配置 (Default Configuration)
 
-系统已默认内置了兼具视觉冲击力与文人雅致的黄金排版参数：
+系统已默认内置兼具视觉冲击力与文人雅致的黄金排版参数：
 
 ```json
 {
   "id": "6114",
   "yangli": "2026-09-27",
   "yinli": "丙午(马)年八月十七",
-  "accountName": "万年黄历",
+  "accountName": "每日封面",
   "dateFormat": "cnDate",
   "hierarchy": "yinliPrimary",
   "stampPosition": "tail",
@@ -34,7 +35,7 @@
   "yinliFontSize": 51,
   "lineSpacing": 74,
   "showBrand": true,
-  "brandText": "万年黄历",
+  "brandText": "岁序良辰",
   "brandSubtext": "ALMANAC · 岁序吉辰",
   "brandStyle": "sealBadge",
   "brandOffsetY": 38,
@@ -55,10 +56,10 @@
 | **阳历字号** (`yangliFontSize`) | `81 px` | 公历大字饱满醒目，读者在公众号订阅号列表一眼看清 |
 | **阴历字号** (`yinliFontSize`) | `51 px` | 农历干支字号适中舒展，与公历大字形成黄金主从比例 |
 | **两行字间距** (`lineSpacing`) | `74 px` | 空间疏朗开阔，呼吸感极强 |
-| **印章美学** (`stampPosition`) | `tail` | **文人落款印**：紧随农历末尾随形盖印，自然雅致不板滞 |
+| **印章美学** (`stampPosition`) | `tail` | **文人落款印**：紧随文字末尾随形盖印，自然雅致不板滞 |
 | **底部品牌开关** (`showBrand`) | `true` | 开启底部品牌标识展示 |
-| **品牌名称文本** (`brandText`) | `万年黄历` | 支持自定义修改为公众号名称或栏目名称 |
-| **品牌排版风格** (`brandStyle`) | `sealBadge` | **朱砂印标**：微型朱砂小印 `[歷]` + 宽间距古典宋体 |
+| **品牌名称文本** (`brandText`) | `岁序良辰` | 支持自定义修改为公众号名称或栏目名称（如“每日时序”、“东方文创”等） |
+| **品牌排版风格** (`brandStyle`) | `sealBadge` | **朱砂印标**：微型朱砂小印 + 宽间距古典宋体 |
 | **品牌距底边距** (`brandOffsetY`) | `38 px` | 距画布底端 38px，完美避开微信订阅号卡片遮挡区 |
 | **品牌字号** (`brandFontSize`) | `13 px` | 克制精致，彰显权威出版品质 |
 | **默认主题** (`theme`) | `songheSpring` | **松鹤迎春**（白羽仙鹤、苍劲青松、宋代水墨天青） |
@@ -68,7 +69,7 @@
 
 ## 🤖 自动化无头调用（Headless Invocation）代码示例
 
-用于每日定时自动化抓取黄历数据、无人值守自动生成公众号封面图并推送到发布后台。
+用于每日定时自动化生成公众号封面图并推送到发布后台。
 
 ### 方式一：Node.js + Puppeteer 无头一键批量渲染（最推荐）
 
@@ -82,19 +83,19 @@ npm install puppeteer
 
 ```javascript
 /**
- * 微信公众号老黄历封面图 - Node.js 无头批量生成脚本
+ * 微信公众号每日封面图 - Node.js 无头批量生成脚本
  */
 import puppeteer from 'puppeteer';
 import fs from 'fs';
 import path from 'path';
 
-async function generateHuangLiCover({
+async function generateDailyCover({
   yangli = '2026-09-27',
   yinli = '丙午(马)年八月十七',
-  brandText = '万年黄历',
+  brandText = '岁序良辰',
   theme = 'songheSpring', // 可选: songheSpring, wuguHarvest, niannianKoi, zhaocaiWealth, ziqiDonglai, fushouShuangquan, huakaiFugui, xishangMeishao, jinyuMantang, zhubaoPingan
   ratio = '2.35:1',      // 2.35:1 (头条大图) 或 1:1 (次条小图)
-  outputPath = './laohuangli_cover.png',
+  outputPath = './daily_cover.png',
   appUrl = 'http://localhost:3000', // 部署的服务端地址或本地地址
 }) {
   const browser = await puppeteer.launch({
@@ -154,10 +155,10 @@ async function generateHuangLiCover({
 }
 
 // 执行生成调用
-generateHuangLiCover({
+generateDailyCover({
   yangli: '2026-09-27',
   yinli: '丙午(马)年八月十七',
-  outputPath: './output/laohuangli_20260927.png',
+  outputPath: './output/daily_cover_20260927.png',
 }).catch(console.error);
 ```
 
@@ -176,7 +177,7 @@ playwright install chromium
 
 ```python
 """
-微信公众号老黄历封面图 - Python 无头自动化生成脚本
+微信公众号每日封面图 - Python 无头自动化生成脚本
 """
 import asyncio
 import base64
@@ -187,7 +188,7 @@ from playwright.async_api import async_playwright
 async def generate_cover(
     yangli: str = "2026-09-27",
     yinli: str = "丙午(马)年八月十七",
-    brand_text: str = "万年黄历",
+    brand_text: str = "岁序良辰",
     theme: str = "songheSpring",
     ratio: str = "2.35:1",
     output_path: str = "./cover.png",
@@ -234,7 +235,7 @@ if __name__ == "__main__":
     asyncio.run(generate_cover(
         yangli="2026-09-27",
         yinli="丙午(马)年八月十七",
-        output_path="./output/huangli_today.png"
+        output_path="./output/daily_cover_today.png"
     ))
 ```
 
@@ -252,7 +253,7 @@ http://localhost:3000/?yangli=2026-09-27&yinli=丙午(马)年八月十七&theme=
 
 - `yangli`: 阳历日期（如 `2026-09-27`）
 - `yinli`: 阴历干支（如 `丙午(马)年八月十七`）
-- `brandText`: 底部品牌文字（如 `万年黄历`）
+- `brandText`: 底部品牌文字（如 `岁序良辰`）
 - `theme`: 主题标识符（见下文主题表）
 - `ratio`: `2.35:1` 或 `1:1`
 - `hierarchy`: `yinliPrimary` (农历大字为主) 或 `yangliPrimary`
@@ -270,16 +271,16 @@ http://localhost:3000/?yangli=2026-09-27&yinli=丙午(马)年八月十七&theme=
 
 | `theme` 参数值 | 主题名称 | 元素与意境 | 适合推文场景 |
 | :--- | :--- | :--- | :--- |
-| `songheSpring` | **松鹤迎春** | 苍劲青松 · 白羽仙鹤 · 天青云霭 | 日常老黄历、延年纳福、节庆 |
-| `wuguHarvest` | **五谷丰登** | 金黄麦穗 · 秋熟稻浪 · 温暖秋晖 | 丰收时节、秋分立秋、财运吉日 |
-| `niannianKoi` | **年年有鱼** | 双尾锦鲤 · 清雅荷花 · 涟漪清波 | 初一十五、转运祈福、开运 |
-| `zhaocaiWealth` | **招财进宝** | 玉雕如意 · 铜钱锦带 · 金线祥云 | 求财纳吉、开市开业、动土纳财 |
-| `ziqiDonglai` | **紫气东来** | 霞蔚紫云 · 晓风翠竹 · 祥禽瑞霭 | 清晨第一条、鸿运当头、正能量 |
-| `fushouShuangquan` | **福寿双全** | 鲜红寿桃 · 灵枝翠叶 · 祥蝠献瑞 | 敬老祝寿、祈安康、平安节气 |
-| `huakaiFugui` | **花开富贵** | 雍容牡丹 · 翩跹彩蝶 · 工笔工雅 | 婚嫁合婚、开花结果、大吉大利 |
+| `songheSpring` | **松鹤迎春** | 苍劲青松 · 白羽仙鹤 · 天青云霭 | 日常推文、延年纳福、传统文化 |
+| `wuguHarvest` | **五谷丰登** | 金黄麦穗 · 秋熟稻浪 · 温暖秋晖 | 丰收时节、秋分立秋、生活美学 |
+| `niannianKoi` | **年年有鱼** | 双尾锦鲤 · 清雅荷花 · 涟漪清波 | 初一十五、好运常伴、开运祈福 |
+| `zhaocaiWealth` | **招财进宝** | 玉雕如意 · 铜钱锦带 · 金线祥云 | 开市开业、迎祥纳福、节日吉庆 |
+| `ziqiDonglai` | **紫气东来** | 霞蔚紫云 · 晓风翠竹 · 祥禽瑞霭 | 清晨早报、朝气蓬勃、正向能量 |
+| `fushouShuangquan` | **福寿双全** | 鲜红寿桃 · 灵枝翠叶 · 祥蝠献瑞 | 敬老祝寿、健康养生、平安节令 |
+| `huakaiFugui` | **花开富贵** | 雍容牡丹 · 翩跹彩蝶 · 工笔工雅 | 喜庆雅集、美满生活、时令花期 |
 | `xishangMeishao` | **喜上眉梢** | 傲骨红梅 · 喜鹊登枝 · 水墨飞白 | 喜事盈门、立春除夕、好运连连 |
-| `jinyuMantang` | **金玉满堂** | 洁白玉兰 · 幽香金桂 · 暖玉底纹 | 阖家团聚、和气生财、满堂吉庆 |
-| `zhubaoPingan` | **竹报平安** | 挺拔青竹 · 苍润露珠 · 天青远山 | 岁岁平安、升学升迁、清雅修身 |
+| `jinyuMantang` | **金玉满堂** | 洁白玉兰 · 幽香金桂 · 暖玉底纹 | 阖家团聚、和气美满、满堂吉庆 |
+| `zhubaoPingan` | **竹报平安** | 挺拔青竹 · 苍润露珠 · 天青远山 | 岁岁平安、学业事业、清雅修身 |
 
 ---
 
@@ -306,7 +307,7 @@ http://localhost:3000/?yangli=2026-09-27&yinli=丙午(马)年八月十七&theme=
 2. 点击顶部 **Settings**（设置）标签页
 3. 在左侧菜单中找到 **Pages**
 4. 在 **Build and deployment** 下方的 **Source** 下拉菜单中，选择 **GitHub Actions**
-5. 保存后，每次你向 `main` 分支执行 `git push`，项目中的 `.github/workflows/deploy.yml` 就会全自动构建并秒级部署至 GitHub Pages！
+5. 保存后，每次向 `main` 分支提交代码，`.github/workflows/deploy.yml` 就会全自动构建并秒级部署至 GitHub Pages！
 
 ---
 
