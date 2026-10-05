@@ -1,0 +1,6 @@
+{
+  "name": "微信公众号老黄历首图生成器",
+  "description": "专为微信公众号打造的图文封面图代码生成器，支持 2.35:1 与 2.45:1 比例，按阳历、阴历老黄历数据实时渲染生成高清大图并支持一键导出下载。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
